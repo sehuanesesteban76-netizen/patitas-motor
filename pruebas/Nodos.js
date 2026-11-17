@@ -4,7 +4,7 @@ const vacunation = new Node({
     date: "02/02",
     motive: "vacunation",
     veterinarian: "Dr.Ríos",
-    cost: "85000"
+    cost: 85000
 })
 
 const weightControl = new Node({
@@ -27,5 +27,17 @@ dentalCleaning.next = null;
 
 const head = vacunation;
 
-console.log(head);
 
+let now = head
+while (now !== null){
+    // console.log("node: ", now)
+    now = now.next
+}
+
+now = head
+let costTotal = 0
+while (now !== null){
+    costTotal += now.data.cost
+    now = now.next
+}
+// console.log(costTotal)
